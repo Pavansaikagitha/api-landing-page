@@ -1,0 +1,1522 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="./assets/images/fav-icon.png" type="image/x-icon" />
+  <title>Route Planning and Optimization APIs - NextBillion.ai</title>
+  <!-- css starts-->
+  <link rel="stylesheet" href="./assets/css/min.css" />
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <!-- css end -->
+  <!-- font awesome cdn -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- owl css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <!-- header starts -->
+  <header class="bg-white sticky-top bx-shadow-header">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <img src="./assets/images/logo.png" alt="" class="img-fluid" />
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mb-2 mb-lg-0 justify-content-center mx-auto">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#">Product</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Solutions</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Resources</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Developers</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Company
+                  <i class="fa-solid fa-angle-down"></i>
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li>
+                    <a class="dropdown-item" href="#">Another action</a>
+                  </li>
+                  <li>
+                    <hr class="dropdown-divider" />
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Pricing</a>
+              </li>
+            </ul>
+            <div class="d-block">
+              <button class="btn btn-rq py-2 px-4" type="submit">
+                Request a Demo
+              </button>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <!-- header end -->
+  <main class="pt-5 overflow-x-hidden">
+    <!-- section 1 starts -->
+    <section class="container pb-5">
+      <!-- hero section starts -->
+      <div class="hero-section pt-4">
+        <div class="row">
+          <div class="col-md-10 offset-md-1 text-center">
+            <h5 class="banner-top">
+              ROUTE PLANNING API<span style="text-transform: lowercase">s</span>
+              FOR MARGIN-SENSITIVE LOGISTICS
+            </h5>
+            <h1 class="banner-text">
+              <span>Plan multi-stop delivery routes</span><br class="d-none d-lg-block" />with dream constraints (but
+              without nightmares in your API bills)
+            </h1>
+            <ul class="d-none d-lg-block">
+              <li class="li-h">
+                <svg xmlns="http://www.w3.org/2000/svg" width="23.5" height="23.5" viewBox="0 0 23.5 23.5">
+                  <g id="Group_60542" data-name="Group 60542" transform="translate(-564.25 -867.25)">
+                    <ellipse id="Ellipse_1075" data-name="Ellipse 1075" cx="11" cy="11" rx="11" ry="11"
+                      transform="translate(565 868)" fill="none" stroke="#8a5cac" stroke-linecap="round"
+                      stroke-linejoin="round" stroke-width="1.5"></ellipse>
+                    <path id="Path_18978" data-name="Path 18978" d="M0,2.767,2.531,6.321,8.478,0"
+                      transform="translate(571.352 876.671) rotate(-8)" fill="none" stroke="#8a5cac"
+                      stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
+                  </g>
+                </svg>
+                Control operational costs
+              </li>
+              <li class="li-h">
+                <svg xmlns="http://www.w3.org/2000/svg" width="23.5" height="23.5" viewBox="0 0 23.5 23.5">
+                  <g id="Group_60542" data-name="Group 60542" transform="translate(-564.25 -867.25)">
+                    <ellipse id="Ellipse_1075" data-name="Ellipse 1075" cx="11" cy="11" rx="11" ry="11"
+                      transform="translate(565 868)" fill="none" stroke="#8a5cac" stroke-linecap="round"
+                      stroke-linejoin="round" stroke-width="1.5"></ellipse>
+                    <path id="Path_18978" data-name="Path 18978" d="M0,2.767,2.531,6.321,8.478,0"
+                      transform="translate(571.352 876.671) rotate(-8)" fill="none" stroke="#8a5cac"
+                      stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
+                  </g>
+                </svg>
+                Absorb jumps in demand
+              </li>
+              <li class="li-h">
+                <svg xmlns="http://www.w3.org/2000/svg" width="23.5" height="23.5" viewBox="0 0 23.5 23.5">
+                  <g id="Group_60542" data-name="Group 60542" transform="translate(-564.25 -867.25)">
+                    <ellipse id="Ellipse_1075" data-name="Ellipse 1075" cx="11" cy="11" rx="11" ry="11"
+                      transform="translate(565 868)" fill="none" stroke="#8a5cac" stroke-linecap="round"
+                      stroke-linejoin="round" stroke-width="1.5"></ellipse>
+                    <path id="Path_18978" data-name="Path 18978" d="M0,2.767,2.531,6.321,8.478,0"
+                      transform="translate(571.352 876.671) rotate(-8)" fill="none" stroke="#8a5cac"
+                      stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
+                  </g>
+                </svg>
+                Meet customer expectations
+              </li>
+            </ul>
+            <!--live demo info -->
+            <a href="#?" class="live-demo-a text-decoration-none">
+              <div class="d-flex align-items-center gap-3">
+                <div>
+                  <img src="./assets/images/user.png" width="50px" alt="user" class="img-fluid" />
+                </div>
+                <div>
+                  Request a live demo <br />
+                  <span>(and get the trial API key)</span>
+                </div>
+                <div>
+                  <img src="./assets/images/arrow-right.svg" alt="arrow" width="40px" class="img-fluid" />
+                </div>
+              </div>
+            </a>
+            <a href="#?" class="d-block text-under-line">
+              <span class="text-pinks">Watch Product Demos</span>
+            </a>
+            <!-- live demo info -->
+          </div>
+        </div>
+        <!-- view banner section starts -->
+        <div class="row align-items-center mt-5 pb-4">
+          <div class="co-12">
+            <img src="./assets/images/home-ro-banner.webp" alt="view banner" class="img-fluid" />
+          </div>
+        </div>
+        <!-- view banner section end -->
+      </div>
+      <!-- hero section end-->
+    </section>
+    <!-- section 1 end -->
+    <!-- section 2 starts -->
+    <section class="bg-white pt-5 pb-5">
+      <div class="container pt-5">
+        <div class="row">
+          <div class="col-md-10 offset-md-1 text-center">
+            <h3 class="fw-bold">
+              Product and tech leaders in large-scale logistics companies use
+              <br class="d-none d-lg-block" />
+              NextBillion.ai
+            </h3>
+            <div class="row align-items-center customer-logo-section">
+              <div class="col-lg-12">
+                <div class="Marquee">
+                  <div class="Marquee-content">
+                    <div class="Marquee-tag">
+                      <img width="189" height="118" loading="lazy" class="Marquee-tag-img"
+                        src="https://nextbillion.ai/wp-content/themes/nb-child/assets/images/company-logos/home/3.svg"
+                        alt="Logo wrap" />
+                    </div>
+                    <div class="Marquee-tag">
+                      <img width="126" height="118" loading="lazy" class="Marquee-tag-img"
+                        src="https://nextbillion.ai/wp-content/themes/nb-child/assets/images/company-logos/home/2.svg"
+                        alt="Logo wrap" />
+                    </div>
+                    <div class="Marquee-tag">
+                      <img width="396" height="118" loading="lazy" class="Marquee-tag-img"
+                        src="https://nextbillion.ai/wp-content/themes/nb-child/assets/images/company-logos/home/doordash.svg"
+                        alt="Logo wrap" />
+                    </div>
+                    <div class="Marquee-tag">
+                      <img width="133" height="118" loading="lazy" class="Marquee-tag-img"
+                        src="https://nextbillion.ai/wp-content/themes/nb-child/assets/images/company-logos/home/db.svg"
+                        alt="Logo wrap" />
+                    </div>
+                    <div class="Marquee-tag">
+                      <img width="269" height="118" loading="lazy" class="Marquee-tag-img"
+                        src="https://nextbillion.ai/wp-content/themes/nb-child/assets/images/company-logos/home/5.svg"
+                        alt="Logo wrap" />
+                    </div>
+                    <div class="Marquee-tag">
+                      <img width="170" height="118" loading="lazy" class="Marquee-tag-img"
+                        src="https://nextbillion.ai/wp-content/themes/nb-child/assets/images/company-logos/home/xgs.png"
+                        alt="Logo wrap" />
+                    </div>
+                    <div class="Marquee-tag">
+                      <img width="329" height="118" loading="lazy" class="Marquee-tag-img"
+                        src="https://nextbillion.ai/wp-content/themes/nb-child/assets/images/company-logos/home/magna.png"
+                        alt="Logo wrap" />
+                    </div>
+                    <div class="Marquee-tag">
+                      <img width="279" height="118" loading="lazy" class="Marquee-tag-img"
+                        src="https://nextbillion.ai/wp-content/themes/nb-child/assets/images/company-logos/home/xplor.png"
+                        alt="Logo wrap" />
+                    </div>
+                    <div class="Marquee-tag">
+                      <img width="349" height="118" loading="lazy" class="Marquee-tag-img"
+                        src="https://nextbillion.ai/wp-content/themes/nb-child/assets/images/company-logos/home/geotab.png"
+                        alt="Logo wrap" />
+                    </div>
+                    <div class="Marquee-tag">
+                      <img width="267" height="118" loading="lazy" class="Marquee-tag-img"
+                        src="https://nextbillion.ai/wp-content/themes/nb-child/assets/images/company-logos/home/8.svg"
+                        alt="Logo wrap" />
+                    </div>
+                    <div class="Marquee-tag">
+                      <img width="247" height="118" loading="lazy" class="Marquee-tag-img"
+                        src="https://nextbillion.ai/wp-content/themes/nb-child/assets/images/company-logos/home/7.svg"
+                        alt="Logo wrap" />
+                    </div>
+                    <div class="Marquee-tag">
+                      <img width="228" height="118" loading="lazy" class="Marquee-tag-img"
+                        src="https://nextbillion.ai/wp-content/themes/nb-child/assets/images/company-logos/home/zepto.png"
+                        alt="Logo wrap" />
+                    </div>
+                    <div class="Marquee-tag">
+                      <img width="226" height="118" loading="lazy" class="Marquee-tag-img"
+                        src="https://nextbillion.ai/wp-content/themes/nb-child/assets/images/company-logos/home/4.svg"
+                        alt="Logo wrap" />
+                    </div>
+                    <div class="Marquee-tag">
+                      <img width="301" height="118" loading="lazy" class="Marquee-tag-img"
+                        src="https://nextbillion.ai/wp-content/themes/nb-child/assets/images/company-logos/home/meesho.png"
+                        alt="Logo wrap" />
+                    </div>
+                    <div class="Marquee-tag">
+                      <img width="189" height="118" loading="lazy" class="Marquee-tag-img"
+                        src="https://nextbillion.ai/wp-content/themes/nb-child/assets/images/company-logos/home/3.svg"
+                        alt="Logo wrap" />
+                    </div>
+                    <div class="Marquee-tag">
+                      <img width="126" height="118" loading="lazy" class="Marquee-tag-img"
+                        src="https://nextbillion.ai/wp-content/themes/nb-child/assets/images/company-logos/home/2.svg"
+                        alt="Logo wrap" />
+                    </div>
+                    <div class="Marquee-tag">
+                      <img width="396" height="118" loading="lazy" class="Marquee-tag-img"
+                        src="https://nextbillion.ai/wp-content/themes/nb-child/assets/images/company-logos/home/doordash.svg"
+                        alt="Logo wrap" />
+                    </div>
+                    <div class="Marquee-tag">
+                      <img width="133" height="118" loading="lazy" class="Marquee-tag-img"
+                        src="https://nextbillion.ai/wp-content/themes/nb-child/assets/images/company-logos/home/db.svg"
+                        alt="Logo wrap" />
+                    </div>
+                    <div class="Marquee-tag">
+                      <img width="269" height="118" loading="lazy" class="Marquee-tag-img"
+                        src="https://nextbillion.ai/wp-content/themes/nb-child/assets/images/company-logos/home/5.svg"
+                        alt="Logo wrap" />
+                    </div>
+                    <div class="Marquee-tag">
+                      <img width="170" height="118" loading="lazy" class="Marquee-tag-img"
+                        src="https://nextbillion.ai/wp-content/themes/nb-child/assets/images/company-logos/home/xgs.png"
+                        alt="Logo wrap" />
+                    </div>
+                    <div class="Marquee-tag">
+                      <img width="329" height="118" loading="lazy" class="Marquee-tag-img"
+                        src="https://nextbillion.ai/wp-content/themes/nb-child/assets/images/company-logos/home/magna.png"
+                        alt="Logo wrap" />
+                    </div>
+                    <div class="Marquee-tag">
+                      <img width="279" height="118" loading="lazy" class="Marquee-tag-img"
+                        src="https://nextbillion.ai/wp-content/themes/nb-child/assets/images/company-logos/home/xplor.png"
+                        alt="Logo wrap" />
+                    </div>
+                    <div class="Marquee-tag">
+                      <img width="349" height="118" loading="lazy" class="Marquee-tag-img"
+                        src="https://nextbillion.ai/wp-content/themes/nb-child/assets/images/company-logos/home/geotab.png"
+                        alt="Logo wrap" />
+                    </div>
+                    <div class="Marquee-tag">
+                      <img width="267" height="118" loading="lazy" class="Marquee-tag-img"
+                        src="https://nextbillion.ai/wp-content/themes/nb-child/assets/images/company-logos/home/8.svg"
+                        alt="Logo wrap" />
+                    </div>
+                    <div class="Marquee-tag">
+                      <img width="247" height="118" loading="lazy" class="Marquee-tag-img"
+                        src="https://nextbillion.ai/wp-content/themes/nb-child/assets/images/company-logos/home/7.svg"
+                        alt="Logo wrap" />
+                    </div>
+                    <div class="Marquee-tag">
+                      <img width="228" height="118" loading="lazy" class="Marquee-tag-img"
+                        src="https://nextbillion.ai/wp-content/themes/nb-child/assets/images/company-logos/home/zepto.png"
+                        alt="Logo wrap" />
+                    </div>
+                    <div class="Marquee-tag">
+                      <img width="226" height="118" loading="lazy" class="Marquee-tag-img"
+                        src="https://nextbillion.ai/wp-content/themes/nb-child/assets/images/company-logos/home/4.svg"
+                        alt="Logo wrap" />
+                    </div>
+                    <div class="Marquee-tag">
+                      <img width="301" height="118" loading="lazy" class="Marquee-tag-img"
+                        src="https://nextbillion.ai/wp-content/themes/nb-child/assets/images/company-logos/home/meesho.png"
+                        alt="Logo wrap" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>
+      <div class="container pt-5 pb-5">
+        <div class="row">
+          <div class="col-12 col-md-10 offset-md-1 text-center">
+            <h2 class="fs-1">Save your margins from pay-per-call APIs that just don’t get complex routing constraints
+            </h2>
+            <p class="mt-3">And cut hours of manual route editing and batch-wise ETA calculations.</p>
+          </div>
+        </div>
+        <div class="row align-items-center g-3 pt-5">
+          <div class="col-12 col-lg-6">
+            <!-- accordion starts -->
+            <div class="accordion" id="accordionExample">
+              <div class="accordion-item mb-2">
+                <h2 class="accordion-header">
+                  <button class="accordion-button acd-btn fs-5 fw-bold" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    Add all constraints that matter
+                  </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show accordion__content"
+                  data-bs-parent="#accordionExample" data-src="assets/images/pay-per-call-2.webp">
+                  <div class="accordion-body">
+                    <p>Control the total cost of fulfillment and prevent on-road surprises with 50+ hard and soft
+                      constraints and custom maps.</p>
+                    <a href="#?" class=" text-pinks text-under-line">Explore all constraints</a>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item mb-2">
+                <h2 class="accordion-header">
+                  <button class="accordion-button acd-btn collapsed fs-5 fw-bold" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false"
+                    aria-controls="collapseTwo">
+                    Solve large routing problems
+                  </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse accordion__content"
+                  data-bs-parent="#accordionExample" data-src="assets/images/pay-per-call-1.webp">
+                  <div class="accordion-body">
+                    <p>Get routes and ETAs for thousands of stops in one go with a low latency end point.</p>
+                    <a href="#?" class=" text-pinks text-under-line">Get a live demo</a>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item mb-2">
+                <h2 class="accordion-header">
+                  <button class="accordion-button acd-btn collapsed fs-5 fw-bold" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false"
+                    aria-controls="collapseThree">
+                    Pay a fixed fee every month
+                  </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse accordion__content"
+                  data-bs-parent="#accordionExample" data-src="assets/images/pay-per-call-3-2x.webp">
+                  <div class="accordion-body">
+                    <p>Absorb fluctuations in the number of API calls you need to make, by choosing to pay per order or
+                      vehicle.</p>
+                    <a href="#?" class=" text-pinks text-under-line">View Pricing Plans</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- accordion end -->
+          </div>
+          <div class="col-12 col-lg-6">
+            <div class="img-shows"> <img src="assets/images/pay-per-call-2.webp" class="so-widget-image img-fluid">
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- owl starts -->
+      <div class="container pt-5">
+        <div class="owl-carousel rounded-5">
+          <!-- card-1 starts -->
+          <div class="card h-100 p-lg-5 p-2 owl-bgs border-0 rounded-5">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-md-3">
+                  <img src="./assets/images/owl-p-1.webp" alt="" class="img-fluid owl-imgs">
+                  <h4 class="text-g my-3">James Nebeker,</h4>
+                  <h5>Machine Learning Engineer, TruckIT</h5>
+                </div>
+                <div class="col-md-8 offset-md-1 my-auto">
+                  <h3 class="fst-italic fw-bold fs-4">"NextBillion.ai solves the problem of providing a high-performance
+                    mapping platform at scale. We use them to generate large distance matrices that we use to solve
+                    unique geospatial routing problems that arise in the short-haul trucking industry."</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- card-1 end -->
+          <!-- card-2 starts -->
+          <div class="card h-100 p-lg-5 p-2 owl-bgs border-0 rounded-5">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-md-3">
+                  <img src="./assets/images/owl-p-2.webp" alt="" class="img-fluid owl-imgs">
+                  <h4 class="text-g my-3">Carson Stevens,</h4>
+                  <h5>Data Engineer, Hawx Pest Control</h5>
+                </div>
+                <div class="col-md-8 offset-md-1 my-auto">
+                  <h3 class="fst-italic fw-bold fs-4">"By substantially reducing the number of developer hours spent on
+                    scheduling, NextBillion.ai’s Route Optimization API and large Distance Matrix API have helped us
+                    improve our operational efficiency and increase our cost savings significantly!"</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- card-2 end -->
+          <!-- card-3 starts -->
+          <div class="card h-100 p-lg-5 p-2 owl-bgs border-0 rounded-5">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-md-3">
+                  <img src="./assets/images/owl-p-3.webp" alt="" class="img-fluid owl-imgs">
+                  <h4 class="text-g my-3">Yantisa Akhadi,</h4>
+                  <h5>Strategy and Partnership Manager, Gojek</h5>
+                </div>
+                <div class="col-md-8 offset-md-1 my-auto">
+                  <h3 class="fst-italic fw-bold fs-4">"I admire NextBillion.ai’s fast response and friendly manners
+                    whenever we need professional support in geospatial data processing. They have delivered a valuable
+                    service and support to our company that we appreciate."</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- card-3 end -->
+
+        </div>
+      </div>
+      <!-- owl end -->
+    </section>
+    <!-- section 2 end -->
+    <!-- section 3 starts -->
+    <section class="pt-5 pb-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-md-10 offset-md-1 text-center">
+            <h2 class="fs-1">Crunch routes and ETAs for your logistics
+              <br class="d-none d-lg-block"> constraints and fleet type
+            </h2>
+            <p class="mt-3">And never worry about the number of stops or API calls you work with.</p>
+          </div>
+        </div>
+
+        <div class="pt-3 mt-5">
+          <!-- box-1 starts -->
+          <div class="row g-5 mt-lg-1">
+            <div class="col-12 col-md-6">
+              <div class="card p-md-5 p-3 border-0 rounded-5 h-100">
+                <div class="card-body">
+                  <h3 class="fs-2">Route Optimization API</h3>
+                  <p>Get efficient routes for your vehicle drivers and field service agents to perform a series of
+                    deliveries or tasks.</p>
+                  <div class="position-relative mb-5 mt-2">
+                    <ul class="list-itemss list-unstyled fw-bold text-gary">
+                      <li>Generate truck-safe routes</li>
+                      <li>Choose from 50+ constraints</li>
+                      <li>Optimize custom travel cost</li>
+                    </ul>
+                  </div>
+                  <a href="#?" class="btn btns-outline border-0 fw-bold py-3 px-4">Learn about Route Optimization</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 w-40 ml-5">
+              <div class="owl-carousel">
+                <div class="items">
+                  <img src="./assets/images/key-1.webp" alt="" class="img-fluid ">
+                </div>
+                <div class="items">
+                  <img src="./assets/images/key-2.webp" alt="" class="img-fluid">
+                </div>
+                <div class="items">
+                  <img src="./assets/images/key-3.webp" alt="" class="img-fluid ">
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- box-1 end -->
+          <!--box-2 starts  -->
+          <div class="row g-5 mt-5">
+            <div class="col-12 col-md-6 w-40 mr-5">
+              <div>
+                <img src="./assets/images/distance-matrix-api.webp" alt="matrix" class="img-fluid h-439">
+              </div>
+            </div>
+            <div class="col-12 col-md-6">
+              <div class="card p-md-5 p-3 border-0 rounded-5">
+                <div class="card-body">
+                  <h3 class="fs-2">Distance Matrix API</h3>
+                  <p>Get accurate transit ETAs and distances from all origins to destinations without high cost or
+                    latency.</p>
+                  <div class="position-relative mb-5 mt-2">
+                    <ul class="list-itemss list-unstyled fw-bold text-gary">
+                      <li>Generate truck mileage</li>
+                      <li>Solve 5000x5000 matrix size</li>
+                      <li>Use a low-latency endpoint</li>
+                    </ul>
+                  </div>
+                  <a href="#?" class="btn btns-outline border-0 fw-bold py-3 px-4">Learn about Distance Matrix
+                    Calculations</a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <!-- box-2 end -->
+          <!-- box-3 starts -->
+          <div class="row g-5 mt-5">
+
+            <div class="col-12 col-md-6">
+              <div class="card p-md-5 p-3 border-0 rounded-5">
+                <div class="card-body">
+                  <h3 class="fs-2">Distance Matrix API</h3>
+                  <p>Get accurate transit ETAs and distances from all origins to destinations without high cost or
+                    latency.</p>
+                  <div class="position-relative mb-5 mt-2">
+                    <ul class="list-itemss list-unstyled fw-bold text-gary">
+                      <li>Generate truck mileage</li>
+                      <li>Solve 5000x5000 matrix size</li>
+                      <li>Use a low-latency endpoint</li>
+                    </ul>
+                  </div>
+                  <a href="#?" class="btn btns-outline border-0 fw-bold py-3 px-4">Learn about Distance Matrix
+                    Calculations</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 w-40 ml-5">
+              <div>
+                <img src="./assets/images/navigation-sdk.webp" alt="matrix" class="img-fluid h-439">
+              </div>
+            </div>
+
+          </div>
+          <!-- box-3 end -->
+          <!-- cta btns starts -->
+          <div class="cta-btn-mains mt-5 mb-4 text-center ">
+            <a href="#?" class="btn btn-rq py-3 px-4 me-md-2 my-2">View three pricing options</a>
+            <a href="#?" class="btn btns-outline py-3 px-4 fw-bold border-0 my-2">Explore all APIs and SDKs</a>
+          </div>
+          <!-- cta btns end -->
+        </div>
+      </div>
+    </section>
+    <!-- swction 3 end -->
+    <!-- section 4 starts -->
+    <section class="pt-5 pb-5 bg-white">
+      <div class="container pt-5 pb-5">
+        <div class="row ">
+          <div class="col-12 col-md-10 offset-md-1 text-center">
+            <h2 class="fs-1 ">Plan routes for your fleet, workforce
+              <br class="d-none d-lg-block"> and logistics niche.
+            </h2>
+
+          </div>
+        </div>
+        <div class="row align-items-center g-4 pt-5">
+          <div class="col-12 col-lg-6">
+            <!-- accordion starts -->
+            <div class="accordion" id="accordionExample1">
+              <div class="accordion-item mb-2">
+                <h2 class="accordion-header">
+                  <button class="accordion-button acd-btn fs-5 fw-bold" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapse1One" aria-expanded="true" aria-controls="collapse1One">
+                    Trucking
+                  </button>
+                </h2>
+                <div id="collapse1One" class="accordion-collapse collapse show accordion__content"
+                  data-bs-parent="#accordionExample1" data-src="assets/images/key2-1.webp">
+                  <div class="accordion-body">
+                    <p>Get truck-safe routes, distances, and ETAs for your drivers to move heavy goods or hazardous
+                      materials.</p>
+                    <div
+                      class="img-logos bg-white p-2 rounded-4 shadow-sm d-flex align-items-center justify-content-between flex-wrap">
+                      <img src="./assets/images/logo-1.svg" alt="" class="logo-img-h">
+                      <img src="./assets/images/logo-2.svg" alt="" class="logo-img-h">
+                      <img src="./assets/images/logo-3.svg" alt="" class="logo-img-h">
+                      <img src="./assets/images/logo-4.png" alt="" class="logo-img-h">
+                    </div>
+                    <div class="mt-3">
+                      <a href="#?" class=" text-pinks text-under-line pe-5">Explore all constraints <i
+                          class="fa-solid fa-arrow-right"></i></a>
+                      <a href="#?" class=" text-pinks text-under-line">Middle mile logistics <i
+                          class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item mb-2">
+                <h2 class="accordion-header">
+                  <button class="accordion-button acd-btn collapsed fs-5 fw-bold" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#collapse1Two" aria-expanded="false"
+                    aria-controls="collapse1Two">
+                    Last mile logistics
+                  </button>
+                </h2>
+                <div id="collapse1Two" class="accordion-collapse collapse accordion__content"
+                  data-bs-parent="#accordionExample1" data-src="assets/images/key2-2.webp">
+                  <div class="accordion-body">
+                    <p>Get accurate routes, distances, and ETAs to deliver orders from your stores and warehouses to the
+                      doorsteps of your end customers.</p>
+                    <div
+                      class="img-logos bg-white p-2 rounded-4 shadow-sm d-flex align-items-center justify-content-between flex-wrap">
+                      <img src="./assets/images/logo-1.svg" alt="" class="logo-img-h">
+                      <img src="./assets/images/logo-2.svg" alt="" class="logo-img-h">
+                      <img src="./assets/images/logo-3.svg" alt="" class="logo-img-h">
+                      <img src="./assets/images/logo-4.png" alt="" class="logo-img-h">
+                    </div>
+                    <div class="mt-3">
+                      <a href="#?" class=" text-pinks text-under-line pe-5">Last mile delivery<i
+                          class="fa-solid fa-arrow-right"></i></a>
+                      <a href="#?" class=" text-pinks text-under-line">On demand logistics<i
+                          class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item mb-2">
+                <h2 class="accordion-header">
+                  <button class="accordion-button acd-btn collapsed fs-5 fw-bold" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#collapse1Three" aria-expanded="false"
+                    aria-controls="collapse1Three">
+                    Pay a fixed fee every month
+                  </button>
+                </h2>
+                <div id="collapse1Three" class="accordion-collapse collapse accordion__content"
+                  data-bs-parent="#accordionExample1" data-src="assets/images/key3-3.webp">
+                  <div class="accordion-body">
+                    <p>Get realistic routes, distances, and ETAs for your field agents to carry out a series of repairs
+                      or jobs matching their skills and territory.</p>
+                    <div
+                      class="img-logos bg-white p-2 rounded-4 shadow-sm d-flex align-items-center justify-content-between flex-wrap">
+                      <img src="./assets/images/logo-1.svg" alt="" class="logo-img-h">
+                      <img src="./assets/images/logo-2.svg" alt="" class="logo-img-h">
+                      <img src="./assets/images/logo-3.svg" alt="" class="logo-img-h">
+                      <img src="./assets/images/logo-4.png" alt="" class="logo-img-h">
+                    </div>
+                    <div class="mt-3">
+                      <a href="#?" class=" text-pinks text-under-line pe-5">Field services<i
+                          class="fa-solid fa-arrow-right"></i></a>
+                      <a href="#?" class=" text-pinks text-under-line"> On demand logistics<i
+                          class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item mb-2">
+                <h2 class="accordion-header">
+                  <button class="accordion-button acd-btn collapsed fs-5 fw-bold" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#collapse1four" aria-expanded="false"
+                    aria-controls="collapse1four">
+                    Mobility
+                  </button>
+                </h2>
+                <div id="collapse1four" class="accordion-collapse collapse accordion__content"
+                  data-bs-parent="#accordionExample1" data-src="assets/images/key4-4.webp">
+                  <div class="accordion-body">
+                    <p>Get traffic-aware routes, distances, and ETAs for ride-hailing or ride-sharing to set accurate
+                      expectations for drivers and passengers.</p>
+                    <div
+                      class="img-logos bg-white p-2 rounded-4 shadow-sm d-flex align-items-center justify-content-between flex-wrap">
+                      <img src="./assets/images/logo-1.svg" alt="" class="logo-img-h">
+                      <img src="./assets/images/logo-2.svg" alt="" class="logo-img-h">
+                      <img src="./assets/images/logo-3.svg" alt="" class="logo-img-h">
+                      <img src="./assets/images/logo-4.png" alt="" class="logo-img-h">
+                    </div>
+                    <div class="mt-3">
+                      <a href="#?" class=" text-pinks text-under-line pe-5">Ride hailing<i
+                          class="fa-solid fa-arrow-right"></i></a>
+                      <a href="#?" class=" text-pinks text-under-line"> NEMT <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- accordion end -->
+          </div>
+          <div class="col-12 col-lg-6 text-end">
+            <div class="img-shows"> <img src="assets/images/key2-1.webp" style="width: 539px; height: 491px;"
+                class="so-widget-image  img-fluid">
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- sub 2 section starts -->
+      <div class="container pt-5 pb-5">
+        <div class="row">
+          <div class="col-12 text-center">
+            <h5 class="banner-top">
+              FOR LOGISTICS TECHNOLOGY PROVIDERS
+            </h5>
+            <h2 class="fs-1">Embed NextBillion.ai Route Planning APIs into <br class="d-none d-lg-block">
+              your TMS or logistics SaaS solution.</h2>
+            <p class="my-3">Strengthen the capabilities of your transport management system with NextBillion.ai’s
+              powerful route planning capablities.</p>
+            <div class="imgs">
+              <img src="./assets/images/mnx.svg" alt="" class="img-fluid imgsl">
+              <img src="./assets/images/tdx.svg" alt="" class="img-fluid imgsl">
+              <img src="./assets/images/geotab.png" alt="" class="img-fluid imgsl ">
+            </div>
+            <a href="#?" class="btn btn-rq py-3 px-4 my-2">Learn more</a>
+          </div>
+        </div>
+      </div>
+      <!-- sub 2 section end -->
+      <!-- sub 3 section starts -->
+      <div class="container pt-5 pb-5">
+        <div class="row">
+          <div class="col-12 text-center">
+            <h2 class="fs-1">Logistics product managers and developers <br class="d-none d-lg-block">
+              love NextBillion.ai APIs & SDKs</h2>
+
+            <div class="imgs mt-4 mb-5">
+              <img src="./assets/images/high-performer-1.svg" alt="" class="img-fluid mx-3 my-2">
+              <img src="./assets/images/best-support-2.svg" alt="" class="img-fluid mx-3 my-2">
+              <img src="./assets/images/momentum-leader-3.svg" alt="" class="img-fluid mx-3 my-2 ">
+              <img src="./assets/images/easiest-to-do-4.svg" alt="" class="img-fluid mx-3 my-2  ">
+            </div>
+            <div class="imgs-1">
+              <img src="./assets/images/g2-badge-1.svg" alt="" class="img-fluid mx-3 my-2">
+              <img src="./assets/images/g2-badge-2.png" alt="" class="img-fluid mx-3 my-2">
+              <img src="./assets/images/g2-badge-3.png" alt="" class="img-fluid mx-3 my-2">
+              <img src="./assets/images/g2-badge-4.svg" alt="" class="img-fluid mx-3 my-2">
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <!-- sub 3 section end -->
+    </section>
+    <!-- section 4 end -->
+    <!-- section 5 starts -->
+    <section class="pt-5 pb-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <h2 class="fs-1 text-center ">Test and go live with NextBillion.ai route <br class="d-none d-lg-block">
+              planning APIs within a week.</h2>
+            <ul class="line-strips list-unstyled position-relative d-none d-lg-block mt-3 ">
+              <li>
+                <span>1</span>
+              </li>
+              <li>
+                <span class="list-2">2</span>
+              </li>
+              <li>
+                <span>3</span>
+              </li>
+            </ul>
+            <!-- cards strats -->
+            <div class="row g-5 mt-1">
+              <div class="col-12 col-lg-4">
+                <div class="card rounded-5 border-0">
+                  <div class="card-img-top ">
+                    <img
+                      src="https://nextbillion.ai/wp-content/themes/nb-child/assets/images/page-specific/product/route-api/new/v3/set-up-1-new-opt.webp"
+                      alt="" class="img-fluid">
+                  </div>
+                  <div class="card-body shadow-sm rounded-5 p-lg-4">
+                    <h4>Get the trial <br class="d-none d-lg-block">API key</h4>
+                    <p class="card-text">Book a demo or a trial onboarding call. And get the trial key.</p>
+                  </div>
+                </div>
+              </div>
+              <!-- 2 box starts -->
+              <div class="col-12 col-lg-4">
+                <div class="card rounded-5 border-0">
+                  <div class="card-img-top ">
+                    <img
+                      src="https://nextbillion.ai/wp-content/themes/nb-child/assets/images/page-specific/product/route-api/new/v3/set-up-2-new-opt.webp"
+                      alt="" class="img-fluid">
+                  </div>
+                  <div class="card-body shadow-sm rounded-5 p-lg-4">
+                    <h4>Test it with your tech <br class="d-none d-lg-block">
+                      and data</h4>
+                    <p class="card-text">Test the APIs with your tools, data, and constraints.</p>
+                  </div>
+                </div>
+              </div>
+              <!-- 2 box end -->
+              <!-- 3 box starts -->
+              <div class="col-12 col-lg-4">
+                <div class="card rounded-5 border-0">
+                  <div class="card-img-top ">
+                    <img
+                      src="https://nextbillion.ai/wp-content/themes/nb-child/assets/images/page-specific/campaign/nb-vs-google/step-3-opt.webp"
+                      alt="" class="img-fluid">
+                  </div>
+                  <div class="card-body shadow-sm rounded-5 p-lg-4">
+                    <h4>Push it to <br class="d-none d-lg-block">
+                      production</h4>
+                    <p class="card-text">Integrate NextBillion route planning APIs with your systems.</p>
+                  </div>
+                </div>
+              </div>
+              <!-- 3 box end -->
+            </div>
+            <!-- cards end -->
+            <div class="cta-btn-mains mt-5 mb-4 text-center ">
+              <a href="#?" class="btn btn-rq py-3 px-4 me-md-2 my-2">Book a trial onboarding call</a>
+              <a href="#?" class="btn btns-outline py-3 px-4 fw-bold border-0 my-2">Read API docs</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- section 5 end -->
+    <!-- section 6 starts -->
+    <section class="pt-5 pb-5 bg-white">
+      <div class="container bg-nr rounded-5 pb-lg-3 pt-lg-5  py-4 px-5">
+        <div class="row">
+          <div class="col-lg-10 offset-lg-1 text-center">
+            <h5 class="banner-top">
+              CASE STUDY
+            </h5>
+            <h2>Learn how transportation and logistics businesses improve operational KPIs with NextBillion.ai</h2>
+          </div>
+
+        </div>
+        <!-- inner row starts-->
+        <div class="row g-4">
+          <div class="col-12 col-lg-4">
+            <div class="card rounded-5 p-lg-4 border-0">
+              <div class="card-img-top ">
+                <img
+                  src="https://nextbillion.ai/wp-content/themes/nb-child/assets/images/page-specific/home-new/v3/case-study-1-new.webp"
+                  alt="" class="img-fluid ">
+              </div>
+              <div class="card-body text-center">
+                <h5 class="banner-top ">
+                  Field Services
+                </h5>
+                <h1 class="text-gr">40%</h1>
+                <p class="fs-5">Reduction in <br class="d-none d-lg-block">scheduling time</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-4">
+            <div class="card rounded-5 p-lg-4 border-0">
+              <div class="card-img-top ">
+                <img
+                  src="https://nextbillion.ai/wp-content/themes/nb-child/assets/images/page-specific/home-new/v3/case-study-2-new.webp"
+                  alt="" class="img-fluid ">
+              </div>
+              <div class="card-body text-center">
+                <h5 class="banner-top ">
+                  Middle Mile Logistics
+                </h5>
+                <h1 class="text-gr">30%</h1>
+                <p class="fs-5">API costs<br class="d-none d-lg-block">savings</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-4">
+            <div class="card rounded-5 p-lg-4 border-0">
+              <div class="card-img-top ">
+                <img
+                  src="https://nextbillion.ai/wp-content/themes/nb-child/assets/images/page-specific/home-new/v3/xgs-banner-small.webp"
+                  alt="" class="img-fluid img-tc">
+              </div>
+              <div class="card-body text-center">
+                <h5 class="banner-top ">
+                  LOGISTICS SOFTWARE
+                </h5>
+                <h1 class="text-gr">35%</h1>
+                <p class="fs-5">Reduction in <br class="d-none d-lg-block">Operating Costs</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- inner row end -->
+        <div class="cta-btn-mains mt-5 mb-4 text-center ">
+
+          <a href="#?" class="btn btns-outline py-3 px-4 fw-bold border-0 my-2">View more case studies</a>
+        </div>
+      </div>
+
+      <!-- inner sub section starts -->
+      <br>
+      <div class="container mt-5 pt-5">
+        <div class="row g-3 ">
+          <div class="col-12 col-lg-5 my-auto ">
+            <h2 class="fs-1">NextBillion.ai APIs integrate with all logistics applications</h2>
+            <p class="my-4">Add advanced routing and dispatch capabilities to your telematics and ERP systems.</p>
+            <a href="#?" class="btn btns-outline py-3 px-4 fw-bold border-0 my-2">View Integrations</a>
+          </div>
+          <div class="col-12 col-lg-6 offset-lg-1">
+            <img
+              src="https://nextbillion.ai/wp-content/themes/nb-child/assets/images/page-specific/home-new/v3/integration-new.webp"
+              alt="" class="img-fluid">
+          </div>
+        </div>
+      </div>
+      <!-- inner sub section end -->
+    </section>
+    <!-- section 6 end -->
+    <!-- Frequently asked questions section starts -->
+    <section class="pt-5 pb-5">
+      <div class="container">
+        <h2 class="fs-1 text-center">Frequently asked questions</h2>
+        <!-- card-1 starts -->
+        <div class="card border-0 rounded-4 p-3 shadow-sm my-4">
+          <div class="card-body">
+            <div class="accordion accordion-flush" id="accordionFlushone">
+              <h3 class="banner-top fs-6 fw-bold mb-3">Features</h3>
+              <div class="accordion-item acd-items">
+                <h2 class="accordion-header ">
+                  <button class="accordion-button collapsed fs-5 fw-bold" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseFlushone" aria-expanded="false"
+                    aria-controls="flush-collapseFlushone">
+                    How is NextBillion.ai different from Google or HERE routing APIs?
+
+                  </button>
+                </h2>
+                <div id="flush-collapseFlushone" class="accordion-collapse collapse"
+                  data-bs-parent="#accordionFlushone">
+                  <div class="accordion-body">NextBillion.ai route planning APIs are designed for margin-sensitive
+                    logistics which need advanced constraints to solve complex and large-scale routing problems without
+                    breaking the bank. <a href="#?" class="text-decoration-none">See how NextBillion.ai stacks up to the
+                      competition.</a></div>
+                </div>
+              </div>
+              <div class="accordion-item acd-items">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed fs-5 fw-bold" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseFlusTwo" aria-expanded="false" aria-controls="flush-collapseFlusTwo">
+                    Which map data do you use to calculate distance matrices?
+                  </button>
+                </h2>
+                <div id="flush-collapseFlusTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushone">
+                  <div class="accordion-body">We use Open Street Maps and TomTom which allows us to tailor and control
+                    the quality of routes much better. That said, these maps are not hardcoded into our route solver. We
+                    swap in new map data depending on what works best for a given territory or routing problem. <a
+                      href="#?" class="text-decoration-none">Learn more about NextBillion.ai Platform</a></div>
+                </div>
+              </div>
+              <div class="accordion-item acd-items">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed fs-5 fw-bold" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseFlusThree" aria-expanded="false"
+                    aria-controls="flush-collapseFlusThree">
+                    Are your routes and estimates as accurate as Google's?
+                  </button>
+                </h2>
+                <div id="flush-collapseFlusThree" class="accordion-collapse collapse"
+                  data-bs-parent="#accordionFlushone">
+                  <div class="accordion-body">Yes, on accuracy, NextBillion.ai route planning APIs is comparable to
+                    Google’s solution. We recommend you <a href="#/" class="text-decoration-none">book a trial
+                      onboarding call and get a trial API key</a> to compare the results.</div>
+                </div>
+              </div>
+              <div class="accordion-item acd-items">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed fs-5 fw-bold" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseFlusfour" aria-expanded="false"
+                    aria-controls="flush-collapseFlusfour">
+                    Which countries and regions do you support route planning APIs for?
+                  </button>
+                </h2>
+                <div id="flush-collapseFlusfour" class="accordion-collapse collapse"
+                  data-bs-parent="#accordionFlushone">
+                  <div class="accordion-body">NextBillion.ai route planning APIs support all countries and regions
+                    across the globe. We even swap in new map data depending on what works best for a given territory or
+                    routing problem.</div>
+                </div>
+              </div>
+              <div class="accordion-item acd-items">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed fs-5 fw-bold" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseFlusfive" aria-expanded="false"
+                    aria-controls="flush-collapseFlusfive">
+                    Do you consider real-time traffic when calculating ETAs and mileage?
+                  </button>
+                </h2>
+                <div id="flush-collapseFlusfive" class="accordion-collapse collapse"
+                  data-bs-parent="#accordionFlushone">
+                  <div class="accordion-body">Yes, like every other mapping solution, NextBillion.ai takes into account
+                    real-time traffic data to calculate distance matrices and suggest the most efficient routes.</div>
+                </div>
+              </div>
+              <div class="accordion-item acd-items">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed fs-5 fw-bold" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseFlussix" aria-expanded="false" aria-controls="flush-collapseFlussix">
+                    Do you also provide routes and mileage for trucks?
+                  </button>
+                </h2>
+                <div id="flush-collapseFlussix" class="accordion-collapse collapse" data-bs-parent="#accordionFlushone">
+                  <div class="accordion-body">Yes, NextBillion.ai route planning APIs let you specify “truck” as your
+                    mode of transport and define “vehicle dimensions” to identify routes and calculate transit time and
+                    mileage in compliance with trucking regulations.</div>
+                </div>
+              </div>
+              <div class="accordion-item acd-items">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed fs-5 fw-bold" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseFlusseven" aria-expanded="false"
+                    aria-controls="flush-collapseFlusseven">
+                    How many stops do you support in a routing problem?
+                  </button>
+                </h2>
+                <div id="flush-collapseFlusseven" class="accordion-collapse collapse"
+                  data-bs-parent="#accordionFlushone">
+                  <div class="accordion-body">NextBillion.ai route planning APIs support up to 10,000 stops for route
+                    optimization. And upto 5000x5000 matrix size for calculating distances and ETAs between origins and
+                    destinations.</div>
+                </div>
+              </div>
+              <div class="accordion-item acd-items">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed fs-5 fw-bold" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseFluseight" aria-expanded="false"
+                    aria-controls="flush-collapseFluseight">
+                    Are your route planning APIs AI- or ML-powered?
+                  </button>
+                </h2>
+                <div id="flush-collapseFluseight" class="accordion-collapse collapse"
+                  data-bs-parent="#accordionFlushone">
+                  <div class="accordion-body">We do have AI/ML capabilities in our roadmap. We can even create a unique
+                    instance for you if you want to teach the algorithm on your own data.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- card-1 end -->
+        <!-- card-2 starts -->
+        <div class="card border-0 rounded-4 p-3 shadow-sm my-4">
+          <div class="card-body">
+            <div class="accordion accordion-flush" id="accordionFlushtwo">
+              <h3 class="banner-top fs-6 fw-bold mb-3">Pricing</h3>
+              <div class="accordion-item acd-items">
+                <h2 class="accordion-header ">
+                  <button class="accordion-button collapsed fs-5 fw-bold" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseFlushone2" aria-expanded="false"
+                    aria-controls="flush-collapseFlushone2">
+                    How are your route planning APIs priced? Is it per API call?
+
+                  </button>
+                </h2>
+                <div id="flush-collapseFlushone2" class="accordion-collapse collapse"
+                  data-bs-parent="#accordionFlushtwo">
+                  <div class="accordion-body">Besides the number of total API calls you make, we offer you the
+                    alternative of paying for the volume of orders you generate or the number of vehicles/agents you
+                    work with. <a href="#?" class="text-decoration-none">Learn more about our pricing</a>.Or simply <a
+                      href="#?" class="text-decoration-none">talk to our sales team.</a></div>
+                </div>
+              </div>
+              <div class="accordion-item acd-items">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed fs-5 fw-bold" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseFlusTwo2" aria-expanded="false"
+                    aria-controls="flush-collapseFlusTwo2">
+                    Do you provide alerts when we cross API usage thresholds?
+                  </button>
+                </h2>
+                <div id="flush-collapseFlusTwo2" class="accordion-collapse collapse"
+                  data-bs-parent="#accordionFlushtwo">
+                  <div class="accordion-body">Yes, with NextBillion.ai, you can enable alerts when you reach 50%, 75%,
+                    and 90% of your allocated API usage.</div>
+                </div>
+              </div>
+              <div class="accordion-item acd-items">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed fs-5 fw-bold" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseFlusThree2" aria-expanded="false"
+                    aria-controls="flush-collapseFlusThree2">
+                    Do you charge for support or professional services?
+                  </button>
+                </h2>
+                <div id="flush-collapseFlusThree2" class="accordion-collapse collapse"
+                  data-bs-parent="#accordionFlushtwo">
+                  <div class="accordion-body">No, we do not charge anything for support or professional services.</div>
+                </div>
+              </div>
+              <div class="accordion-item acd-items">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed fs-5 fw-bold" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseFlusfour2" aria-expanded="false"
+                    aria-controls="flush-collapseFlusfour2">
+                    Do you charge extra for adding new features or capabilities?
+                  </button>
+                </h2>
+                <div id="flush-collapseFlusfour2" class="accordion-collapse collapse"
+                  data-bs-parent="#accordionFlushtwo">
+                  <div class="accordion-body">No, we are always eager to add capabilities based on market needs, and
+                    rather quickly. Some new features we are adding currently are - distance matrix caching for faster
+                    re-optimizations, zone-wise route sequencing, and zone-wise task grouping.</div>
+                </div>
+              </div>
+              <div class="accordion-item acd-items">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed fs-5 fw-bold" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseFlusfive2" aria-expanded="false"
+                    aria-controls="flush-collapseFlusfive2">
+                    What is the term of your contract?
+                  </button>
+                </h2>
+                <div id="flush-collapseFlusfive2" class="accordion-collapse collapse"
+                  data-bs-parent="#accordionFlushtwo">
+                  <div class="accordion-body">NextBillion.ai enters into annual contracts, with complete flexibility for
+                    modifying allocated API usage. We recommend you <a href="#?" class="text-decoration-none">book a
+                      trial onboarding call </a> to learn more.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- card-2 end -->
+        <!-- card-3 starts -->
+        <div class="card border-0 rounded-4 p-3 shadow-sm my-4">
+          <div class="card-body">
+            <div class="accordion accordion-flush" id="accordionFlushthree">
+              <h3 class="banner-top fs-6 fw-bold mb-3">Speed, scalability, and security</h3>
+              <div class="accordion-item acd-items">
+                <h2 class="accordion-header ">
+                  <button class="accordion-button collapsed fs-5 fw-bold" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseFlushone3" aria-expanded="false"
+                    aria-controls="flush-collapseFlushone3">
+                    What kind of latency or speed can I expect?
+
+                  </button>
+                </h2>
+                <div id="flush-collapseFlushone3" class="accordion-collapse collapse"
+                  data-bs-parent="#accordionFlushthree">
+                  <div class="accordion-body">You can expect a response for many thousands of elements in about 5
+                    seconds. (the number of origins times the number of destinations equals the number of elements).</a>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item acd-items">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed fs-5 fw-bold" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseFlusTwo3" aria-expanded="false"
+                    aria-controls="flush-collapseFlusTwo3">
+                    What is your service level guarantee or SLA for uptime?
+                  </button>
+                </h2>
+                <div id="flush-collapseFlusTwo3" class="accordion-collapse collapse"
+                  data-bs-parent="#accordionFlushthree">
+                  <div class="accordion-body">We offer an on-contract guarantee of 99.9% uptime.</div>
+                </div>
+              </div>
+              <div class="accordion-item acd-items">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed fs-5 fw-bold" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseFlusThree3" aria-expanded="false"
+                    aria-controls="flush-collapseFlusThree3">
+                    What are the security certifications you have?
+                  </button>
+                </h2>
+                <div id="flush-collapseFlusThree3" class="accordion-collapse collapse"
+                  data-bs-parent="#accordionFlushthree">
+                  <div class="accordion-body">We are SOC2 and ISO/IEC 27001:2013 certified.</div>
+                </div>
+              </div>
+              <div class="accordion-item acd-items">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed fs-5 fw-bold" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseFlusfour3" aria-expanded="false"
+                    aria-controls="flush-collapseFlusfour3">
+                    Where is your route planning solution hosted?
+                  </button>
+                </h2>
+                <div id="flush-collapseFlusfour3" class="accordion-collapse collapse"
+                  data-bs-parent="#accordionFlushthree">
+                  <div class="accordion-body">NextBillion.ai route planning is a cloud-based solution, regionally
+                    deployed and hosted in North America, Oregon(United States), Belgium, and Singapore.</div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <!-- card-3 end -->
+        <!-- card-4 starts -->
+        <div class="card border-0 rounded-4 p-3 shadow-sm my-4">
+          <div class="card-body">
+            <div class="accordion accordion-flush" id="accordionFlushfour">
+              <h3 class="banner-top fs-6 fw-bold mb-3">Testing and deployment support</h3>
+              <div class="accordion-item acd-items">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed fs-5 fw-bold" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseFlus14" aria-expanded="false" aria-controls="flush-collapseFlus14">
+                    Can I evaluate your route planning APIs before purchasing?
+                  </button>
+                </h2>
+                <div id="flush-collapseFlus14" class="accordion-collapse collapse" data-bs-parent="#accordionFlushfour">
+                  <div class="accordion-body">Yes, we offer a trial API key for a week or two so you can test it with
+                    your data and applications. This helps you check the accuracy of transit time and distance estimates
+                    and the efficiency of the routes. Plus, you can compare the results with your current map routing
+                    solution. It also helps you evaluate the speed and the scalability of our solution.</div>
+                </div>
+              </div>
+
+              <div class="accordion-item acd-items">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed fs-5 fw-bold" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseFlusThree4" aria-expanded="false"
+                    aria-controls="flush-collapseFlusThree4">
+                    Where can I see the API documentation?
+                  </button>
+                </h2>
+                <div id="flush-collapseFlusThree4" class="accordion-collapse collapse"
+                  data-bs-parent="#accordionFlushfour">
+                  <div class="accordion-body">You can find comprehensive <a href="#?"
+                      class="text-decoration-none">documentation on our website.</a></div>
+                </div>
+              </div>
+              <div class="accordion-item acd-items">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed fs-5 fw-bold" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseFlusfour4" aria-expanded="false"
+                    aria-controls="flush-collapseFlusfour4">
+                    Can you take our sample data and compute routes or transit ETAs and distances for us to evaluate?
+                  </button>
+                </h2>
+                <div id="flush-collapseFlusfour4" class="accordion-collapse collapse"
+                  data-bs-parent="#accordionFlushfour">
+                  <div class="accordion-body">Yes, we recommend you <a href="#?" class="text-decoration-none">book a
+                      trial onboarding call for that.</a></div>
+                </div>
+              </div>
+              <div class="accordion-item acd-items">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed fs-5 fw-bold" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseFlusfive4" aria-expanded="false"
+                    aria-controls="flush-collapseFlusfive4">
+                    How long does it take to set up NextBillion.ai route planning APIs?
+                  </button>
+                </h2>
+                <div id="flush-collapseFlusfive4" class="accordion-collapse collapse"
+                  data-bs-parent="#accordionFlushfour">
+                  <div class="accordion-body">With the help of our support team, It takes you only a week to formulate
+                    and tune the map routing objective function for your unique use case and business goals, and to
+                    integrate the API with your applications.</div>
+                </div>
+              </div>
+              <div class="accordion-item acd-items">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed fs-5 fw-bold" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseFlusfive4" aria-expanded="false"
+                    aria-controls="flush-collapseFlusfive4">
+                    Do you provide integration and implementation support?
+                  </button>
+                </h2>
+                <div id="flush-collapseFlusfive4" class="accordion-collapse collapse"
+                  data-bs-parent="#accordionFlushfour">
+                  <div class="accordion-body">Yes, we have a support team and location intelligence consultants to help
+                    you integrate and implement the route planning APIs effectively.</div>
+                </div>
+              </div>
+              <div class="accordion-item acd-items">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed fs-5 fw-bold" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseFlusfive5" aria-expanded="false"
+                    aria-controls="flush-collapseFlusfive5">
+                    Can I deploy NextBillion.ai route planning APIs on-premise?
+                  </button>
+                </h2>
+                <div id="flush-collapseFlusfive5" class="accordion-collapse collapse"
+                  data-bs-parent="#accordionFlushfour">
+                  <div class="accordion-body">Yes, NextBillion.ai offers on-premise deployment and works hands-on with
+                    your engineering and operations teams to implement and integrate it with your existing systems and
+                    workflows.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- card-4 end -->
+         <!-- live demo card starts -->
+          <br>
+          <div class="shadow-sm p-4 bg-white rounded-4 mt-5">
+          <div class="row g-4 align-items-center">
+            <div class="col-12 col-lg-7">
+              <h2>Test NextBillion.ai route planning APIs with your logistics data and constraints.</h2>
+            </div>
+            <div class="col-12 col-lg-5 text-center">
+              <a href="#?" class="btn btn-rq py-3 px-4 me-md-2 my-2">Request live demo</a>
+              <a href="#?" class="btn btns-outline py-3 px-4 fw-bold border-0 my-2">Read API docs</a>
+            </div>
+          </div>
+        </div>
+          <!-- live demo card end -->
+      </div>
+    </section>
+    <!-- Frequently asked questions section end -->
+     <!-- footer starts -->
+      <div class="ft-bg pt-4 pb-5">
+        <footer class="container pt-5 ">
+          <div class="row">
+            <div class="col-12 col-lg-10">
+              <div class="row g-4">
+                <!-- col-1 -->
+                <div class="col-12 col-lg-3">
+                  <h2 class="text-white fs-5 my-3">PRODUCTS</h2>
+                  <div class="links">
+                   <ul class="list-unstyled">
+                    <li><a href="#?" class="nav-link my-2" >Route Optimization API</a></li>
+                    <li><a href="#?" class="nav-link my-2 " >Directions and Distance Matrix API</a></li>
+                    <li><a href="#?" class="nav-link my-2" >Navigation API & SDKs</a></li>
+                    <li><a href="#?" class="nav-link my-2" >Live Tracking API & SDKs</a></li>
+                    <li><a href="#?" class="nav-link my-2" >Geofencing API</a></li>
+                    <li><a href="#?" class="nav-link my-2" >Clustering API</a></li>
+                    <li><a href="#?" class="nav-link my-2" >Snap-to-road API</a></li>
+                    
+                   </ul>
+                  </div>
+                </div>
+                <!-- col-1 -->
+                 <!-- col-2 -->
+                 <div class="col-12 col-lg-3">
+                  <h2 class="text-white fs-5 my-3">SOLUTIONS</h2>
+                  <div class="links">
+                   <ul class="list-unstyled">
+                    <li><a href="#?" class="nav-link my-2" >Trucking</a></li>
+                    <li><a href="#?" class="nav-link my-2 " >Fleet Management</a></li>
+                    <li><a href="#?" class="nav-link my-2" >Last Mile Delivery</a></li>
+                    <li><a href="#?" class="nav-link my-2" >On-Demand Deliveries</a></li>
+                    <li><a href="#?" class="nav-link my-2" >Field Services</a></li>
+                    <li><a href="#?" class="nav-link my-2" >Waste Collection</a></li>
+                    <li><a href="#?" class="nav-link my-2" >Ride Hailing</a></li>
+                    <li><a href="#?" class="nav-link my-2" >Non Emergency Medical Transport</a></li>
+                   
+                    <li><a href="#?" class="nav-link my-2" >Middle Mile Delivery</a></li>
+                    <li><a href="#?" class="nav-link my-2" >Construction</a></li>
+                    
+                   </ul>
+                  </div>
+                </div>
+                  <!-- col-2 -->
+                   <!-- col-3 -->
+                   <div class="col-12 col-lg-3">
+                    <h2 class="text-white fs-5 my-3">COMPARE</h2>
+                    <div class="links">
+                     <ul class="list-unstyled">
+                      <li><a href="#?" class="nav-link my-2" >NextBillion.ai vs Google Route Optimization API</a></li>
+                     
+                      <li><a href="#?" class="nav-link my-2" >NextBillion.ai vs Google Distance Matrix API</a></li>
+                     
+                      <li><a href="#?" class="nav-link my-2" >NextBillion.ai vs HERE</a></li>
+                      <li><a href="#?" class="nav-link my-2" >NextBillion.ai vs Routific</a></li>
+                      <li><a href="#?" class="nav-link my-2" >View All</a></li> 
+                     </ul>
+                    </div>
+                    <h2 class="text-white fs-5 my-3">DEVELOPERS</h2>
+                    <div class="links">
+                      <ul class="list-unstyled">
+                       <li><a href="#?" class="nav-link my-2" >API Docs</a></li>
+                       <li><a href="#?" class="nav-link my-2 " >Integrations</a></li>
+                       <li><a href="#?" class="nav-link my-2" >Notebooks</a></li>
+                       <li><a href="#?" class="nav-link my-2" >Platform Overview</a></li>
+                       
+                      </ul>
+                     </div>
+                  </div>
+                    <!-- col-3 -->
+                     <!-- col-4 -->
+                     <div class="col-12 col-lg-3">
+                      <h2 class="text-white fs-5 my-3">RESOURCES</h2>
+                      <div class="links">
+                       <ul class="list-unstyled">
+                        <li><a href="#?" class="nav-link my-2" >Product Demos</a></li>
+                        <li><a href="#?" class="nav-link my-2 " >ROI Calculator</a></li>
+                        <li><a href="#?" class="nav-link my-2" >Case Studies</a></li>
+                        <li><a href="#?" class="nav-link my-2" >E-books</a></li>
+                        <li><a href="#?" class="nav-link my-2" >Product Updates</a></li>
+                        <li><a href="#?" class="nav-link my-2" >Blog</a></li>
+                       </ul>
+                      </div>
+                      <h2 class="text-white fs-5 my-3">GUIDES</h2>
+                      <div class="links">
+                        <ul class="list-unstyled">
+                         <li><a href="#?" class="nav-link my-2" >Route Optimization Guide</a></li>
+                         <li><a href="#?" class="nav-link my-2 " >Distance Matrix Guide</a></li>
+                         <li><a href="#?" class="nav-link my-2" >Truck Route Planning Guide</a></li> 
+                        </ul>
+                       </div>
+                       <h2 class="text-white fs-5 my-3">COMPANY</h2>
+                       <div class="links">
+                         <ul class="list-unstyled">
+                          <li><a href="#?" class="nav-link my-2" >Pricing</a></li>
+                          <li><a href="#?" class="nav-link my-2 " >Partners</a></li>
+                          <li><a href="#?" class="nav-link my-2" >About Us</a></li> 
+                          <li><a href="#?" class="nav-link my-2" >Contact us</a></li> 
+                          <li><a href="#?" class="nav-link my-2" >Trust Center</a></li> 
+                         </ul>
+                        </div>
+                    </div>
+                      <!-- col-4 -->
+              </div>
+            </div>
+            <div class="col-12 col-lg-2">
+              <div class="m-3 d-flex justify-content-center">
+                <img src="https://nextbillion.ai/wp-content/uploads/2022/11/logo-white.svg" alt="" class="img-fluid ft-img">
+              </div>
+              <div class="crds-logos">
+                <p class="text-center mb-1">Available on</p>
+              <ul class="list-unstyled crd-logos d-flex align-items-center justify-content-between">
+                
+                <li>
+                  <img src="https://nextbillion.ai/wp-content/uploads/2024/10/aws.png" alt="" class="img-fluid">
+                </li>
+                <li><img src="https://nextbillion.ai/wp-content/uploads/2024/10/google-cloud.png" alt="" class="img-fluid"></li>
+                <li><img src="https://nextbillion.ai/wp-content/uploads/2024/10/azure.png" alt="" class="img-fluid"></li>
+              </ul>
+            </div>
+
+            <div class="credits text-center">
+              <ul class="list-unstyled crd-logos">
+                <li><img src="https://nextbillion.ai/wp-content/uploads/2024/10/aicpa.png" alt="" class="img-fluid"></li>
+                <li><img src="https://nextbillion.ai/wp-content/uploads/2024/10/gdpr.png" alt="" class="img-fluid"></li>
+                <li><img src="https://nextbillion.ai/wp-content/uploads/2024/10/iso.png" alt="" class="img-fluid"></li>
+              </ul>
+            </div>
+            </div>
+          </div>
+
+        </footer>
+      </div>
+      <!-- footer end -->
+       <div class="ftb-bg py-4">
+        <div class="container">
+          <div class="row align-items-center g-3">
+              <div class="col-12 col-lg-3">
+                <p class="mb-0">© 2024 NextBillion.ai All Rights Reserved</p>
+              </div>
+              <div class="col-12 col-lg-6">
+                <ul class="list-unstyled nav">
+                  <li><a href="#?" class="nav-link ftb-cl">Privacy Policy</a></li>
+                  <li><a href="#?" class="nav-link ftb-cl">Terms of Service</a></li>
+                  <li><a href="#?" class="nav-link ftb-cl">SLA</a></li>
+                  <li><a href="#?" class="nav-link ftb-cl">Support Services Agreement</a></li>
+                </ul>
+              </div>
+              <div class="col-12 col-lg-3">
+                <ul class="list-unstyled nav">
+                  <li><a href="#?" class="nav-link ftb-cl"><i class="fa-brands fa-x-twitter"></i></a></li>
+                  <li><a href="#?" class="nav-link ftb-cl"><i class="fa-brands fa-linkedin"></i></a></li>
+                  <li><a href="#?" class="nav-link ftb-cl"><i class="fa-brands fa-youtube"></i></a></li>
+                  <li><a href="#?" class="nav-link ftb-cl"><i class="fa-brands fa-instagram"></i></a></li>
+                  <li><a href="#?" class="nav-link ftb-cl"><i class="fa-brands fa-medium"></i></a></li>
+                </ul>
+              </div>
+          </div>
+        </div>
+       </div>
+  </main>
+
+
+  <!-- bs js  -->
+  <script src="./assets/js/min.js"></script>
+  <!-- jquery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+    integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- own js -->
+  <script>
+    // accordion js starts
+    $('.accordion__content').on('show.bs.collapse', function () {
+      $('.so-widget-image').attr('src', $(this).attr('data-src'));
+    });
+// accordion js End
+    $(document).ready(function () {
+      $(".owl-carousel").owlCarousel({
+        items: 1,   
+        loop: true,
+        dots: true,
+        margin: 10,
+        autoplay: true,
+        autoplayTimeout: 3000,
+        autoplayHoverPause: true
+
+      });
+
+    });
+
+
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+    integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+
+</html>

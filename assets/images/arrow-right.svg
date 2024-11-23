@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="53" height="52" viewBox="0 0 53 52">
+  <g id="Group_60558" data-name="Group 60558" transform="translate(-0.248 -0.358)">
+    <g id="Group_60557" data-name="Group 60557" transform="translate(12.278 16.882)">
+      <line id="Line_220" data-name="Line 220" x2="28.243" transform="translate(0 10.097)" fill="none" stroke="#fff" stroke-width="1.5"/>
+      <g id="Group_60556" data-name="Group 60556" transform="translate(18.075)">
+        <line id="Line_221" data-name="Line 221" x2="10.167" y2="9.758" fill="none" stroke="#fff" stroke-width="1.5"/>
+        <line id="Line_222" data-name="Line 222" y1="9.758" x2="10.167" transform="translate(0 9.216)" fill="none" stroke="#fff" stroke-width="1.5"/>
+      </g>
+    </g>
+    <g id="Ellipse_1546" data-name="Ellipse 1546" transform="translate(0.248 0.358)" fill="none" stroke="#fff" stroke-width="1.5">
+      <ellipse cx="26.5" cy="26" rx="26.5" ry="26" stroke="none"/>
+      <ellipse cx="26.5" cy="26" rx="25.75" ry="25.25" fill="none"/>
+    </g>
+  </g>
+</svg>
